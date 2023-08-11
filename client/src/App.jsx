@@ -86,10 +86,10 @@ function App() {
             <pre className="output">
               {loading ? (
                 <div className="boxinbox">
-                  <div className="spinner"></div>
+                  <div className="spinner2"></div>
                 </div>
               ) : (
-                { userOutput }
+                userOutput
               )}
             </pre>
           </div>
