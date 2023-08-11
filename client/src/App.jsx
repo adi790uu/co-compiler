@@ -28,6 +28,7 @@ function App() {
     };
     const response = await api.post('/compile', data);
     setUserOutput(response.data.output.programOutput);
+    setLoading(false);
     // console.log(response);
   };
 
