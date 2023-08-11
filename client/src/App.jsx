@@ -13,7 +13,6 @@ function App() {
   const [fontSize, setFontSize] = useState(20);
   const [userInput, setUserInput] = useState('');
   const [userOutput, setUserOutput] = useState('');
-  const [outputLoading, setOutputLoading] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const options = {
@@ -21,7 +20,7 @@ function App() {
   };
 
   const compile = async () => {
-    setOutputLoading(true);
+    setLoading(true);
     const data = {
       userCode: userCode,
       lang: lang,
@@ -82,17 +81,19 @@ function App() {
               onChange={e => setUserInput(e.target.value)}
             ></textarea>
           </div>
-
           <h4>Output:</h4>
-          {loading ? (
-            <div className="spinner-box">
-              {outputLoading && <h1>Loading...</h1>}
-            </div>
-          ) : (
-            <div className="output-box">
-              <pre className="output">{userOutput}</pre>
-            </div>
-          )}
+          <div className="output-box">
+            <pre className="output">
+              {loading ? (
+                <div className="boxinbox">
+                  <div className="spinner"></div>
+                </div>
+              ) : (
+                { userOutput }
+              )}
+            </pre>
+          </div>
+          )
         </div>
       </div>
     </div>
