@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 require('dotenv').config();
-const port = process.env.PORT || 6000;
 const { compileCpp, compileJava, compileC, compilePy } = require('./Compile');
 
 app.use(cors());
