@@ -34,6 +34,7 @@ function App() {
 
   const clearOutput = () => {
     setUserOutput('');
+    setUserInput('');
   };
 
   return (
