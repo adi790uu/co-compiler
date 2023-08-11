@@ -12,9 +12,6 @@ const Navbar = ({ lang, setLang, theme, setTheme, fontSize, setFontSize }) => {
   const themes = [
     { value: 'vs-dark', label: 'Dark' },
     { value: 'light', label: 'Light' },
-    { value: 'github', label: 'github' },
-    { value: 'vs-monokai', label: 'vs-monokai' },
-    { value: 'tomorrow-night-blue', label: 'night-blue' },
   ];
   return (
     <div className="navbar">

@@ -8,7 +8,7 @@ import clearButton from './clear.png';
 
 function App() {
   const [userCode, setUserCode] = useState('');
-  const [lang, setLang] = useState('c++');
+  const [lang, setLang] = useState('c');
   const [theme, setTheme] = useState('vs-dark');
   const [fontSize, setFontSize] = useState(20);
   const [userInput, setUserInput] = useState('');
@@ -29,7 +29,7 @@ function App() {
     };
     const response = await api.post('/compile', data);
     setUserOutput(response.data.output.programOutput);
-    console.log(response);
+    // console.log(response);
   };
 
   const clearOutput = () => {
@@ -55,7 +55,7 @@ function App() {
             width="100%"
             theme={theme}
             language={lang}
-            defaultLanguage="Select Language"
+            defaultLanguage="c"
             onChange={value => {
               setUserCode(value);
             }}
